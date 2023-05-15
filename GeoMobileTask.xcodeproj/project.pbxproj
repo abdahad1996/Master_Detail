@@ -11,6 +11,8 @@
 		653EE1C22A12E4980023D843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1C12A12E4980023D843 /* ContentView.swift */; };
 		653EE1C42A12E49B0023D843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653EE1C32A12E49B0023D843 /* Assets.xcassets */; };
 		653EE1C82A12E49B0023D843 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653EE1C72A12E49B0023D843 /* Preview Assets.xcassets */; };
+		653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1EB2A12EB030023D843 /* UserLoader.swift */; };
+		653EE1EE2A12EB170023D843 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1ED2A12EB170023D843 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		653EE1C32A12E49B0023D843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		653EE1C52A12E49B0023D843 /* GeoMobileTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoMobileTask.entitlements; sourceTree = "<group>"; };
 		653EE1C72A12E49B0023D843 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		653EE1EB2A12EB030023D843 /* UserLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoader.swift; sourceTree = "<group>"; };
+		653EE1ED2A12EB170023D843 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		653EE1BE2A12E4980023D843 /* GeoMobileTask */ = {
 			isa = PBXGroup;
 			children = (
+				653EE1EA2A12EAF30023D843 /* User Feature */,
 				653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */,
 				653EE1C12A12E4980023D843 /* ContentView.swift */,
 				653EE1C32A12E49B0023D843 /* Assets.xcassets */,
@@ -67,6 +72,15 @@
 				653EE1C72A12E49B0023D843 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		653EE1EA2A12EAF30023D843 /* User Feature */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1EB2A12EB030023D843 /* UserLoader.swift */,
+				653EE1ED2A12EB170023D843 /* User.swift */,
+			);
+			path = "User Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653EE1EE2A12EB170023D843 /* User.swift in Sources */,
+				653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */,
 				653EE1C22A12E4980023D843 /* ContentView.swift in Sources */,
 				653EE1C02A12E4980023D843 /* GeoMobileTaskApp.swift in Sources */,
 			);
