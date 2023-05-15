@@ -15,6 +15,7 @@
 		653EE1EE2A12EB170023D843 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1ED2A12EB170023D843 /* User.swift */; };
 		653EE1F32A12EBCB0023D843 /* Helper+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F22A12EBCB0023D843 /* Helper+StatusCode.swift */; };
 		653EE1F52A12EBF10023D843 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F42A12EBF10023D843 /* HttpClient.swift */; };
+		653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		653EE1ED2A12EB170023D843 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		653EE1F22A12EBCB0023D843 /* Helper+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+StatusCode.swift"; sourceTree = "<group>"; };
 		653EE1F42A12EBF10023D843 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				653EE1F22A12EBCB0023D843 /* Helper+StatusCode.swift */,
 				653EE1F42A12EBF10023D843 /* HttpClient.swift */,
+				653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */,
 			);
 			path = "User Api";
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */,
 				653EE1EE2A12EB170023D843 /* User.swift in Sources */,
 				653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */,
 				653EE1F32A12EBCB0023D843 /* Helper+StatusCode.swift in Sources */,
