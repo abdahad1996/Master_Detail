@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		653EE1C02A12E4980023D843 /* GeoMobileTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */; };
+		653EE1C22A12E4980023D843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1C12A12E4980023D843 /* ContentView.swift */; };
+		653EE1C42A12E49B0023D843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653EE1C32A12E49B0023D843 /* Assets.xcassets */; };
+		653EE1C82A12E49B0023D843 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653EE1C72A12E49B0023D843 /* Preview Assets.xcassets */; };
+		653EE1D22A12E49B0023D843 /* GeoMobileTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1D12A12E49B0023D843 /* GeoMobileTaskTests.swift */; };
+		653EE1DC2A12E49B0023D843 /* GeoMobileTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1DB2A12E49B0023D843 /* GeoMobileTaskUITests.swift */; };
+		653EE1DE2A12E49B0023D843 /* GeoMobileTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1DD2A12E49B0023D843 /* GeoMobileTaskUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		653EE1CE2A12E49B0023D843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 653EE1B42A12E4980023D843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 653EE1BB2A12E4980023D843;
+			remoteInfo = GeoMobileTask;
+		};
+		653EE1D82A12E49B0023D843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 653EE1B42A12E4980023D843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 653EE1BB2A12E4980023D843;
+			remoteInfo = GeoMobileTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		653EE1BC2A12E4980023D843 /* GeoMobileTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoMobileTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMobileTaskApp.swift; sourceTree = "<group>"; };
+		653EE1C12A12E4980023D843 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		653EE1C32A12E49B0023D843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		653EE1C52A12E49B0023D843 /* GeoMobileTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoMobileTask.entitlements; sourceTree = "<group>"; };
+		653EE1C72A12E49B0023D843 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		653EE1CD2A12E49B0023D843 /* GeoMobileTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoMobileTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		653EE1D12A12E49B0023D843 /* GeoMobileTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMobileTaskTests.swift; sourceTree = "<group>"; };
+		653EE1D72A12E49B0023D843 /* GeoMobileTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoMobileTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		653EE1DB2A12E49B0023D843 /* GeoMobileTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMobileTaskUITests.swift; sourceTree = "<group>"; };
+		653EE1DD2A12E49B0023D843 /* GeoMobileTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMobileTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		653EE1B92A12E4980023D843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE1CA2A12E49B0023D843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE1D42A12E49B0023D843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		653EE1B32A12E4980023D843 = {
+			isa = PBXGroup;
+			children = (
+				653EE1BE2A12E4980023D843 /* GeoMobileTask */,
+				653EE1D02A12E49B0023D843 /* GeoMobileTaskTests */,
+				653EE1DA2A12E49B0023D843 /* GeoMobileTaskUITests */,
+				653EE1BD2A12E4980023D843 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		653EE1BD2A12E4980023D843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1BC2A12E4980023D843 /* GeoMobileTask.app */,
+				653EE1CD2A12E49B0023D843 /* GeoMobileTaskTests.xctest */,
+				653EE1D72A12E49B0023D843 /* GeoMobileTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		653EE1BE2A12E4980023D843 /* GeoMobileTask */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */,
+				653EE1C12A12E4980023D843 /* ContentView.swift */,
+				653EE1C32A12E49B0023D843 /* Assets.xcassets */,
+				653EE1C52A12E49B0023D843 /* GeoMobileTask.entitlements */,
+				653EE1C62A12E49B0023D843 /* Preview Content */,
+			);
+			path = GeoMobileTask;
+			sourceTree = "<group>";
+		};
+		653EE1C62A12E49B0023D843 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1C72A12E49B0023D843 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		653EE1D02A12E49B0023D843 /* GeoMobileTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1D12A12E49B0023D843 /* GeoMobileTaskTests.swift */,
+			);
+			path = GeoMobileTaskTests;
+			sourceTree = "<group>";
+		};
+		653EE1DA2A12E49B0023D843 /* GeoMobileTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1DB2A12E49B0023D843 /* GeoMobileTaskUITests.swift */,
+				653EE1DD2A12E49B0023D843 /* GeoMobileTaskUITestsLaunchTests.swift */,
+			);
+			path = GeoMobileTaskUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		653EE1BB2A12E4980023D843 /* GeoMobileTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653EE1E12A12E49B0023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTask" */;
+			buildPhases = (
+				653EE1B82A12E4980023D843 /* Sources */,
+				653EE1B92A12E4980023D843 /* Frameworks */,
+				653EE1BA2A12E4980023D843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoMobileTask;
+			productName = GeoMobileTask;
+			productReference = 653EE1BC2A12E4980023D843 /* GeoMobileTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		653EE1CC2A12E49B0023D843 /* GeoMobileTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653EE1E42A12E49B0023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTaskTests" */;
+			buildPhases = (
+				653EE1C92A12E49B0023D843 /* Sources */,
+				653EE1CA2A12E49B0023D843 /* Frameworks */,
+				653EE1CB2A12E49B0023D843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				653EE1CF2A12E49B0023D843 /* PBXTargetDependency */,
+			);
+			name = GeoMobileTaskTests;
+			productName = GeoMobileTaskTests;
+			productReference = 653EE1CD2A12E49B0023D843 /* GeoMobileTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		653EE1D62A12E49B0023D843 /* GeoMobileTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653EE1E72A12E49B0023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTaskUITests" */;
+			buildPhases = (
+				653EE1D32A12E49B0023D843 /* Sources */,
+				653EE1D42A12E49B0023D843 /* Frameworks */,
+				653EE1D52A12E49B0023D843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				653EE1D92A12E49B0023D843 /* PBXTargetDependency */,
+			);
+			name = GeoMobileTaskUITests;
+			productName = GeoMobileTaskUITests;
+			productReference = 653EE1D72A12E49B0023D843 /* GeoMobileTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		653EE1B42A12E4980023D843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					653EE1BB2A12E4980023D843 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					653EE1CC2A12E49B0023D843 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 653EE1BB2A12E4980023D843;
+					};
+					653EE1D62A12E49B0023D843 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 653EE1BB2A12E4980023D843;
+					};
+				};
+			};
+			buildConfigurationList = 653EE1B72A12E4980023D843 /* Build configuration list for PBXProject "GeoMobileTask" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 653EE1B32A12E4980023D843;
+			productRefGroup = 653EE1BD2A12E4980023D843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				653EE1BB2A12E4980023D843 /* GeoMobileTask */,
+				653EE1CC2A12E49B0023D843 /* GeoMobileTaskTests */,
+				653EE1D62A12E49B0023D843 /* GeoMobileTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		653EE1BA2A12E4980023D843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653EE1C82A12E49B0023D843 /* Preview Assets.xcassets in Resources */,
+				653EE1C42A12E49B0023D843 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE1CB2A12E49B0023D843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE1D52A12E49B0023D843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		653EE1B82A12E4980023D843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653EE1C22A12E4980023D843 /* ContentView.swift in Sources */,
+				653EE1C02A12E4980023D843 /* GeoMobileTaskApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE1C92A12E49B0023D843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653EE1D22A12E49B0023D843 /* GeoMobileTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE1D32A12E49B0023D843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653EE1DC2A12E49B0023D843 /* GeoMobileTaskUITests.swift in Sources */,
+				653EE1DE2A12E49B0023D843 /* GeoMobileTaskUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		653EE1CF2A12E49B0023D843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 653EE1BB2A12E4980023D843 /* GeoMobileTask */;
+			targetProxy = 653EE1CE2A12E49B0023D843 /* PBXContainerItemProxy */;
+		};
+		653EE1D92A12E49B0023D843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 653EE1BB2A12E4980023D843 /* GeoMobileTask */;
+			targetProxy = 653EE1D82A12E49B0023D843 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		653EE1DF2A12E49B0023D843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		653EE1E02A12E49B0023D843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		653EE1E22A12E49B0023D843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeoMobileTask/GeoMobileTask.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GeoMobileTask/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		653EE1E32A12E49B0023D843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeoMobileTask/GeoMobileTask.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GeoMobileTask/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		653EE1E52A12E49B0023D843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoMobileTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeoMobileTask";
+			};
+			name = Debug;
+		};
+		653EE1E62A12E49B0023D843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoMobileTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeoMobileTask";
+			};
+			name = Release;
+		};
+		653EE1E82A12E49B0023D843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeoMobileTask;
+			};
+			name = Debug;
+		};
+		653EE1E92A12E49B0023D843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeoMobileTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		653EE1B72A12E4980023D843 /* Build configuration list for PBXProject "GeoMobileTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653EE1DF2A12E49B0023D843 /* Debug */,
+				653EE1E02A12E49B0023D843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653EE1E12A12E49B0023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653EE1E22A12E49B0023D843 /* Debug */,
+				653EE1E32A12E49B0023D843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653EE1E42A12E49B0023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653EE1E52A12E49B0023D843 /* Debug */,
+				653EE1E62A12E49B0023D843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653EE1E72A12E49B0023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653EE1E82A12E49B0023D843 /* Debug */,
+				653EE1E92A12E49B0023D843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 653EE1B42A12E4980023D843 /* Project object */;
+}
