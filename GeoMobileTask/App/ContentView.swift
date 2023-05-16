@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+  
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+       UserListView(viewModel: UserListViewModel(userLoader: MainQueueDispatchDecorator(decoratee: UserRemoteLoader(url: URL(string: "https://reqres.in/api/users?per_page=10")!, client: URLSessionHTTPClient(session: .shared)))))
     }
 }
 

@@ -11,7 +11,7 @@ enum UserMapper {
         let data: [UserRemote]
         
         private enum CodingKeys: String, CodingKey {
-            case data = "Data"
+            case data = "data"
         }
         
         var users : [User] {

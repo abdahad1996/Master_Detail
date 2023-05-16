@@ -18,6 +18,12 @@
 		653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */; };
 		653EE1F92A12F1470023D843 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F82A12F1470023D843 /* UserMapper.swift */; };
 		653EE1FE2A1392D20023D843 /* UserRemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1FD2A1392D20023D843 /* UserRemoteLoader.swift */; };
+		653EE2022A1397D80023D843 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2012A1397D80023D843 /* UserListViewModel.swift */; };
+		653EE2082A139B780023D843 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2072A139B780023D843 /* UserListView.swift */; };
+		653EE20A2A13AA910023D843 /* UserRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2092A13AA910023D843 /* UserRowViewModel.swift */; };
+		653EE20C2A13B6690023D843 /* MainDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE20B2A13B6690023D843 /* MainDecorator.swift */; };
+		653EE20E2A13D5870023D843 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE20D2A13D5870023D843 /* UserRowView.swift */; };
+		653EE2102A13DA230023D843 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE20F2A13DA230023D843 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		653EE1F82A12F1470023D843 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 		653EE1FD2A1392D20023D843 /* UserRemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteLoader.swift; sourceTree = "<group>"; };
+		653EE2012A1397D80023D843 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		653EE2072A139B780023D843 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		653EE2092A13AA910023D843 /* UserRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowViewModel.swift; sourceTree = "<group>"; };
+		653EE20B2A13B6690023D843 /* MainDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDecorator.swift; sourceTree = "<group>"; };
+		653EE20D2A13D5870023D843 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		653EE20F2A13DA230023D843 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +78,12 @@
 		653EE1BE2A12E4980023D843 /* GeoMobileTask */ = {
 			isa = PBXGroup;
 			children = (
-				653EE1FA2A12F19B0023D843 /* Apis */,
-				653EE1EA2A12EAF30023D843 /* Feature */,
-				653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */,
-				653EE1C12A12E4980023D843 /* ContentView.swift */,
+				653EE2002A13978C0023D843 /* Presentation */,
 				653EE1C32A12E49B0023D843 /* Assets.xcassets */,
 				653EE1C52A12E49B0023D843 /* GeoMobileTask.entitlements */,
+				653EE1FF2A13974B0023D843 /* App */,
+				653EE1FA2A12F19B0023D843 /* Apis */,
+				653EE1EA2A12EAF30023D843 /* Feature */,
 				653EE1C62A12E49B0023D843 /* Preview Content */,
 			);
 			path = GeoMobileTask;
@@ -128,6 +140,68 @@
 				653EE1ED2A12EB170023D843 /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		653EE1FF2A13974B0023D843 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */,
+				653EE1C12A12E4980023D843 /* ContentView.swift */,
+				653EE20B2A13B6690023D843 /* MainDecorator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		653EE2002A13978C0023D843 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2042A1398640023D843 /* UserDetail */,
+				653EE2032A1397DC0023D843 /* UserList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		653EE2032A1397DC0023D843 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2062A139B630023D843 /* Scene */,
+				653EE2052A139A760023D843 /* ViewModel */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		653EE2042A1398640023D843 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2112A13DE350023D843 /* Scene */,
+				653EE20F2A13DA230023D843 /* UserDetailView.swift */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		653EE2052A139A760023D843 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2012A1397D80023D843 /* UserListViewModel.swift */,
+				653EE2092A13AA910023D843 /* UserRowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		653EE2062A139B630023D843 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2072A139B780023D843 /* UserListView.swift */,
+				653EE20D2A13D5870023D843 /* UserRowView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		653EE2112A13DE350023D843 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,14 +274,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653EE20E2A13D5870023D843 /* UserRowView.swift in Sources */,
+				653EE2022A1397D80023D843 /* UserListViewModel.swift in Sources */,
 				653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */,
+				653EE20C2A13B6690023D843 /* MainDecorator.swift in Sources */,
 				653EE1FE2A1392D20023D843 /* UserRemoteLoader.swift in Sources */,
 				653EE1EE2A12EB170023D843 /* User.swift in Sources */,
 				653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */,
 				653EE1F32A12EBCB0023D843 /* Helper+StatusCode.swift in Sources */,
 				653EE1C22A12E4980023D843 /* ContentView.swift in Sources */,
+				653EE2082A139B780023D843 /* UserListView.swift in Sources */,
+				653EE20A2A13AA910023D843 /* UserRowViewModel.swift in Sources */,
 				653EE1F52A12EBF10023D843 /* HttpClient.swift in Sources */,
 				653EE1C02A12E4980023D843 /* GeoMobileTaskApp.swift in Sources */,
+				653EE2102A13DA230023D843 /* UserDetailView.swift in Sources */,
 				653EE1F92A12F1470023D843 /* UserMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
