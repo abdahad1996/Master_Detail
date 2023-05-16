@@ -21,7 +21,6 @@ enum UserMapper {
         }
     }
     
-    
     struct UserRemote: Codable {
         let id: Int
         let email, firstName, lastName: String
@@ -35,19 +34,16 @@ enum UserMapper {
         }
     }
     
-    private enum Error: Swift.Error {
-        case invalidData
-    }
 
     private static var OK_200: Int { 200 }
     
-    static func map(_ data: Data, from response: HTTPURLResponse) throws -> [User] {
+    static func map(_ data: Data, from response: HTTPURLResponse)  -> UserLoader.Result {
         guard response.statusCode == OK_200,
               let items = try? JSONDecoder().decode(UserRootResponse.self, from: data) else {
-            throw Error.invalidData
+            return .failure(UserRemoteLoader.Error.invalidData)
         }
         
-        return items.users
+        return .success(items.users)
     }
 }
 

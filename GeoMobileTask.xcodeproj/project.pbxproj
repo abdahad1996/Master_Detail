@@ -17,6 +17,7 @@
 		653EE1F52A12EBF10023D843 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F42A12EBF10023D843 /* HttpClient.swift */; };
 		653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */; };
 		653EE1F92A12F1470023D843 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1F82A12F1470023D843 /* UserMapper.swift */; };
+		653EE1FE2A1392D20023D843 /* UserRemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE1FD2A1392D20023D843 /* UserRemoteLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		653EE1F42A12EBF10023D843 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		653EE1F82A12F1470023D843 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
+		653EE1FD2A1392D20023D843 /* UserRemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				653EE1FA2A12F19B0023D843 /* Apis */,
-				653EE1EA2A12EAF30023D843 /* User Feature */,
+				653EE1EA2A12EAF30023D843 /* Feature */,
 				653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */,
 				653EE1C12A12E4980023D843 /* ContentView.swift */,
 				653EE1C32A12E49B0023D843 /* Assets.xcassets */,
@@ -83,19 +85,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		653EE1EA2A12EAF30023D843 /* User Feature */ = {
+		653EE1EA2A12EAF30023D843 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				653EE1EB2A12EB030023D843 /* UserLoader.swift */,
-				653EE1ED2A12EB170023D843 /* User.swift */,
+				653EE1FC2A13928C0023D843 /* User */,
 			);
-			path = "User Feature";
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		653EE1EF2A12EBA30023D843 /* User Api */ = {
 			isa = PBXGroup;
 			children = (
 				653EE1F82A12F1470023D843 /* UserMapper.swift */,
+				653EE1FD2A1392D20023D843 /* UserRemoteLoader.swift */,
 			);
 			path = "User Api";
 			sourceTree = "<group>";
@@ -117,6 +119,15 @@
 				653EE1F42A12EBF10023D843 /* HttpClient.swift */,
 			);
 			path = SharedApi;
+			sourceTree = "<group>";
+		};
+		653EE1FC2A13928C0023D843 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1EB2A12EB030023D843 /* UserLoader.swift */,
+				653EE1ED2A12EB170023D843 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */,
+				653EE1FE2A1392D20023D843 /* UserRemoteLoader.swift in Sources */,
 				653EE1EE2A12EB170023D843 /* User.swift in Sources */,
 				653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */,
 				653EE1F32A12EBCB0023D843 /* Helper+StatusCode.swift in Sources */,
