@@ -24,6 +24,11 @@
 		653EE20C2A13B6690023D843 /* MainDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE20B2A13B6690023D843 /* MainDecorator.swift */; };
 		653EE20E2A13D5870023D843 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE20D2A13D5870023D843 /* UserRowView.swift */; };
 		653EE2102A13DA230023D843 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE20F2A13DA230023D843 /* UserDetailView.swift */; };
+		653EE2162A1443080023D843 /* UserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2152A1443080023D843 /* UserCache.swift */; };
+		653EE2192A1444070023D843 /* UserLocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2182A1444070023D843 /* UserLocalLoader.swift */; };
+		653EE21C2A1445280023D843 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE21B2A1445280023D843 /* UserStore.swift */; };
+		653EE21E2A14C70D0023D843 /* UserRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE21D2A14C70C0023D843 /* UserRemote.swift */; };
+		653EE2202A14C8D40023D843 /* UserLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE21F2A14C8D40023D843 /* UserLocal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		653EE20B2A13B6690023D843 /* MainDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDecorator.swift; sourceTree = "<group>"; };
 		653EE20D2A13D5870023D843 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		653EE20F2A13DA230023D843 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		653EE2152A1443080023D843 /* UserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCache.swift; sourceTree = "<group>"; };
+		653EE2182A1444070023D843 /* UserLocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalLoader.swift; sourceTree = "<group>"; };
+		653EE21B2A1445280023D843 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		653EE21D2A14C70C0023D843 /* UserRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemote.swift; sourceTree = "<group>"; };
+		653EE21F2A14C8D40023D843 /* UserLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +88,12 @@
 		653EE1BE2A12E4980023D843 /* GeoMobileTask */ = {
 			isa = PBXGroup;
 			children = (
+				653EE2122A1442970023D843 /* Cache */,
 				653EE2002A13978C0023D843 /* Presentation */,
 				653EE1C32A12E49B0023D843 /* Assets.xcassets */,
 				653EE1C52A12E49B0023D843 /* GeoMobileTask.entitlements */,
 				653EE1FF2A13974B0023D843 /* App */,
-				653EE1FA2A12F19B0023D843 /* Apis */,
+				653EE1FA2A12F19B0023D843 /* Api */,
 				653EE1EA2A12EAF30023D843 /* Feature */,
 				653EE1C62A12E49B0023D843 /* Preview Content */,
 			);
@@ -110,18 +121,19 @@
 			children = (
 				653EE1F82A12F1470023D843 /* UserMapper.swift */,
 				653EE1FD2A1392D20023D843 /* UserRemoteLoader.swift */,
+				653EE21D2A14C70C0023D843 /* UserRemote.swift */,
 			);
 			path = "User Api";
 			sourceTree = "<group>";
 		};
-		653EE1FA2A12F19B0023D843 /* Apis */ = {
+		653EE1FA2A12F19B0023D843 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				653EE2142A1442CE0023D843 /* Infrastructure */,
 				653EE1FB2A13826F0023D843 /* SharedApi */,
-				653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */,
 				653EE1EF2A12EBA30023D843 /* User Api */,
 			);
-			path = Apis;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		653EE1FB2A13826F0023D843 /* SharedApi */ = {
@@ -138,6 +150,7 @@
 			children = (
 				653EE1EB2A12EB030023D843 /* UserLoader.swift */,
 				653EE1ED2A12EB170023D843 /* User.swift */,
+				653EE2152A1443080023D843 /* UserCache.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -202,6 +215,48 @@
 			children = (
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		653EE2122A1442970023D843 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2172A1443F00023D843 /* User Local */,
+				653EE2132A1442A40023D843 /* Infrastructure */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		653EE2132A1442A40023D843 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		653EE2142A1442CE0023D843 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				653EE21A2A1444BD0023D843 /* UrlSession */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		653EE2172A1443F00023D843 /* User Local */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2182A1444070023D843 /* UserLocalLoader.swift */,
+				653EE21B2A1445280023D843 /* UserStore.swift */,
+				653EE21F2A14C8D40023D843 /* UserLocal.swift */,
+			);
+			path = "User Local";
+			sourceTree = "<group>";
+		};
+		653EE21A2A1444BD0023D843 /* UrlSession */ = {
+			isa = PBXGroup;
+			children = (
+				653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */,
+			);
+			path = UrlSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				653EE20E2A13D5870023D843 /* UserRowView.swift in Sources */,
+				653EE21E2A14C70D0023D843 /* UserRemote.swift in Sources */,
+				653EE2192A1444070023D843 /* UserLocalLoader.swift in Sources */,
 				653EE2022A1397D80023D843 /* UserListViewModel.swift in Sources */,
+				653EE2202A14C8D40023D843 /* UserLocal.swift in Sources */,
 				653EE1F72A12EE230023D843 /* URLSessionHTTPClient.swift in Sources */,
 				653EE20C2A13B6690023D843 /* MainDecorator.swift in Sources */,
 				653EE1FE2A1392D20023D843 /* UserRemoteLoader.swift in Sources */,
+				653EE21C2A1445280023D843 /* UserStore.swift in Sources */,
 				653EE1EE2A12EB170023D843 /* User.swift in Sources */,
 				653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */,
 				653EE1F32A12EBCB0023D843 /* Helper+StatusCode.swift in Sources */,
@@ -287,6 +346,7 @@
 				653EE20A2A13AA910023D843 /* UserRowViewModel.swift in Sources */,
 				653EE1F52A12EBF10023D843 /* HttpClient.swift in Sources */,
 				653EE1C02A12E4980023D843 /* GeoMobileTaskApp.swift in Sources */,
+				653EE2162A1443080023D843 /* UserCache.swift in Sources */,
 				653EE2102A13DA230023D843 /* UserDetailView.swift in Sources */,
 				653EE1F92A12F1470023D843 /* UserMapper.swift in Sources */,
 			);

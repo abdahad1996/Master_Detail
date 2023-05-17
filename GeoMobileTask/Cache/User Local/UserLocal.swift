@@ -1,13 +1,13 @@
 //
-//  User.swift
+//  UserLocal.swift
 //  GeoMobileTask
 //
-//  Created by macbook abdul on 16/05/2023.
+//  Created by macbook abdul on 17/05/2023.
 //
 
 import Foundation
 
-public struct User: Codable {
+public struct UserLocal: Codable {
     let id: Int
     let email, firstName, lastName: String
     let avatar: String
