@@ -19,11 +19,18 @@ extension UserLocalLoader: UserCache {
     public typealias SaveResult = Result<Void, Error>
     
     public func save(_ users: [User], completion: @escaping (UserCache.Result) -> Void) {
-        self.cache(users, with: completion)
+        store.delete  { [weak self] error in
+            guard let self = self else { return }
+            if let cacheDeletionError = error {
+                completion(cacheDeletionError)
+            } else {
+                self.cache(users, with: completion)            }
+        }
+         
     }
     
     private func cache(_ users: [User], with completion: @escaping (UserCache.Result) -> Void) {
-        store.insert(users.toLocal(), insertionCompletion: { [weak self] error in
+        store.insert(users.toLocal(), completion: { [weak self] error in
             guard let _ = self else { return }
             completion(error)
         })

@@ -15,18 +15,20 @@ public enum RetrieveCachedUserResult {
 
 public protocol UserStore {
     
-    typealias InsertionResult = Result<Void, Error>
-    typealias InsertionCompletion = (InsertionResult) -> Void
-    
-//    typealias RetrievalResult = Result<[UserLocal?], Error>
+    typealias DeletionCompletion = (Error?) -> Void
+    typealias InsertionCompletion = (Error?) -> Void
     typealias RetrievalCompletion = (RetrieveCachedUserResult) -> Void
     
+    /// The completion handler can be invoked in any thread
+    /// Clients are responsible to dispatch to approprate threads, if needed.
+    func delete(completion: @escaping DeletionCompletion)
     
-    /// Completion handler can be invoked in any threads.
-    /// Clients are responsible to dispatch to appropriate threads, if needed.
-    func insert(_ orders: [UserLocal], insertionCompletion: @escaping InsertionCompletion)
+    /// The completion handler can be invoked in any thread
+    /// Clients are responsible to dispatch to approprate threads, if needed.
+    func insert(_ orders: [UserLocal], completion: @escaping InsertionCompletion)
     
-    /// Completion handler can be invoked in any threads.
-    /// Clients are responsible to dispatch to appropriate threads, if needed.
+    /// The completion handler can be invoked in any thread
+    /// Clients are responsible to dispatch to approprate threads, if needed.
     func retrieve(completion: @escaping RetrievalCompletion)
+    
 }

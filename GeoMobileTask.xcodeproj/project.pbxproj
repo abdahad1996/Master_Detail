@@ -29,6 +29,9 @@
 		653EE21C2A1445280023D843 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE21B2A1445280023D843 /* UserStore.swift */; };
 		653EE21E2A14C70D0023D843 /* UserRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE21D2A14C70C0023D843 /* UserRemote.swift */; };
 		653EE2202A14C8D40023D843 /* UserLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE21F2A14C8D40023D843 /* UserLocal.swift */; };
+		653EE2232A14F2C60023D843 /* CodeableUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2222A14F2C60023D843 /* CodeableUserStore.swift */; };
+		653EE2252A154D540023D843 /* UserLoaderWithFallBackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */; };
+		653EE2272A15536F0023D843 /* UserLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		653EE21B2A1445280023D843 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		653EE21D2A14C70C0023D843 /* UserRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemote.swift; sourceTree = "<group>"; };
 		653EE21F2A14C8D40023D843 /* UserLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocal.swift; sourceTree = "<group>"; };
+		653EE2222A14F2C60023D843 /* CodeableUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeableUserStore.swift; sourceTree = "<group>"; };
+		653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderWithFallBackComposite.swift; sourceTree = "<group>"; };
+		653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,8 @@
 				653EE1BF2A12E4980023D843 /* GeoMobileTaskApp.swift */,
 				653EE1C12A12E4980023D843 /* ContentView.swift */,
 				653EE20B2A13B6690023D843 /* MainDecorator.swift */,
+				653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */,
+				653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 		653EE2132A1442A40023D843 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				653EE2212A14F0110023D843 /* FileSystem */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -257,6 +266,14 @@
 				653EE1F62A12EE230023D843 /* URLSessionHTTPClient.swift */,
 			);
 			path = UrlSession;
+			sourceTree = "<group>";
+		};
+		653EE2212A14F0110023D843 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2222A14F2C60023D843 /* CodeableUserStore.swift */,
+			);
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653EE2272A15536F0023D843 /* UserLoaderCacheDecorator.swift in Sources */,
 				653EE20E2A13D5870023D843 /* UserRowView.swift in Sources */,
+				653EE2232A14F2C60023D843 /* CodeableUserStore.swift in Sources */,
 				653EE21E2A14C70D0023D843 /* UserRemote.swift in Sources */,
 				653EE2192A1444070023D843 /* UserLocalLoader.swift in Sources */,
 				653EE2022A1397D80023D843 /* UserListViewModel.swift in Sources */,
@@ -339,6 +358,7 @@
 				653EE1FE2A1392D20023D843 /* UserRemoteLoader.swift in Sources */,
 				653EE21C2A1445280023D843 /* UserStore.swift in Sources */,
 				653EE1EE2A12EB170023D843 /* User.swift in Sources */,
+				653EE2252A154D540023D843 /* UserLoaderWithFallBackComposite.swift in Sources */,
 				653EE1EC2A12EB040023D843 /* UserLoader.swift in Sources */,
 				653EE1F32A12EBCB0023D843 /* Helper+StatusCode.swift in Sources */,
 				653EE1C22A12E4980023D843 /* ContentView.swift in Sources */,

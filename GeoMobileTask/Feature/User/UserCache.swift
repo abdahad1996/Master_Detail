@@ -9,6 +9,6 @@ import Foundation
 
  
 public protocol UserCache {
-    typealias Result = Swift.Result<Void, Error>
+    typealias Result = Error?
     func save(_ user: [User], completion: @escaping (Result) -> Void)
 }
