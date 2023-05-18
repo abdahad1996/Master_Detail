@@ -13,7 +13,7 @@
 - [x] First start of the app: With an existing internet connection the data is displayed in a list. The images are displayed and you can open a detail view. The detail view shows the same data as in the cell with a different layout.
 - [x] Second start of the app with a switched off internet connection:  The app displays the saved data. The images are not displayed.
 
-#### Solution:
+#### Solution:(video attached)
 1- https://github.com/frodo10messi/GeeMobile_Task/assets/28492677/dcf652ee-5d64-488c-a7de-29109ea72b74
 
 2- https://github.com/frodo10messi/GeeMobile_Task/assets/28492677/17198b6d-4f51-4880-9825-58f6136306cf
