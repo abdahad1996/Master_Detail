@@ -40,10 +40,9 @@ Finally, I composed all the module inside the **RootView**.
 
 #### Improvements:
 - Unit Testing for entire app
-- unit tests for network layer
 - add snapshot tests to test ui layout
 - add dark mode 
-- add support for landscape
+- improve UI for landscape
 
 
 
