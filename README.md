@@ -14,9 +14,9 @@
 - [x] Second start of the app with a switched off internet connection:  The app displays the saved data. The images are not displayed.
 
 #### Solution:(video attached)
-1- https://github.com/frodo10messi/GeeMobile_Task/assets/28492677/dcf652ee-5d64-488c-a7de-29109ea72b74
+![contain](https://github.com/frodo10messi/GeeMobile_Task/assets/28492677/dcf652ee-5d64-488c-a7de-29109ea72b74)
 
-2- https://github.com/frodo10messi/GeeMobile_Task/assets/28492677/17198b6d-4f51-4880-9825-58f6136306cf
+![contain](https://github.com/frodo10messi/GeeMobile_Task/assets/28492677/17198b6d-4f51-4880-9825-58f6136306cf)
 
 ## App Architecture :
 
