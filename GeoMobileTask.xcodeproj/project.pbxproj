@@ -32,7 +32,21 @@
 		653EE2232A14F2C60023D843 /* CodeableUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2222A14F2C60023D843 /* CodeableUserStore.swift */; };
 		653EE2252A154D540023D843 /* UserLoaderWithFallBackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */; };
 		653EE2272A15536F0023D843 /* UserLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */; };
+		653EE22F2A1641C20023D843 /* GeoMobileEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE22E2A1641C20023D843 /* GeoMobileEndToEndTests.swift */; };
+		653EE2372A1663BF0023D843 /* XCTestCase+TrackMemoryLeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2362A1663BF0023D843 /* XCTestCase+TrackMemoryLeak.swift */; };
+		65F3ABCF2A1669A8007BA4C9 /* UserLoaderWithFallBackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3ABCE2A1669A8007BA4C9 /* UserLoaderWithFallBackCompositeTests.swift */; };
+		65F3ABD22A181072007BA4C9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3ABD12A181071007BA4C9 /* Helpers.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		653EE2302A1641C20023D843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 653EE1B42A12E4980023D843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 653EE1BB2A12E4980023D843;
+			remoteInfo = GeoMobileTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		653EE1BC2A12E4980023D843 /* GeoMobileTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoMobileTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,10 +76,22 @@
 		653EE2222A14F2C60023D843 /* CodeableUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeableUserStore.swift; sourceTree = "<group>"; };
 		653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderWithFallBackComposite.swift; sourceTree = "<group>"; };
 		653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderCacheDecorator.swift; sourceTree = "<group>"; };
+		653EE22C2A1641C20023D843 /* GeoMobileTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoMobileTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		653EE22E2A1641C20023D843 /* GeoMobileEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMobileEndToEndTests.swift; sourceTree = "<group>"; };
+		653EE2362A1663BF0023D843 /* XCTestCase+TrackMemoryLeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+TrackMemoryLeak.swift"; sourceTree = "<group>"; };
+		65F3ABCE2A1669A8007BA4C9 /* UserLoaderWithFallBackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderWithFallBackCompositeTests.swift; sourceTree = "<group>"; };
+		65F3ABD12A181071007BA4C9 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		653EE1B92A12E4980023D843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE2292A1641C20023D843 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				653EE1BE2A12E4980023D843 /* GeoMobileTask */,
+				653EE22D2A1641C20023D843 /* GeoMobileTaskTests */,
 				653EE1BD2A12E4980023D843 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				653EE1BC2A12E4980023D843 /* GeoMobileTask.app */,
+				653EE22C2A1641C20023D843 /* GeoMobileTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,6 +304,57 @@
 			path = FileSystem;
 			sourceTree = "<group>";
 		};
+		653EE22D2A1641C20023D843 /* GeoMobileTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				65F3ABD02A18104D007BA4C9 /* New Group */,
+				65F3ABCD2A166921007BA4C9 /* App */,
+				65F3ABCC2A166917007BA4C9 /* Presentation */,
+				65F3ABCB2A166908007BA4C9 /* EndToEndTests */,
+				653EE2352A1663980023D843 /* Helpers */,
+			);
+			path = GeoMobileTaskTests;
+			sourceTree = "<group>";
+		};
+		653EE2352A1663980023D843 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2362A1663BF0023D843 /* XCTestCase+TrackMemoryLeak.swift */,
+				65F3ABD12A181071007BA4C9 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		65F3ABCB2A166908007BA4C9 /* EndToEndTests */ = {
+			isa = PBXGroup;
+			children = (
+				653EE22E2A1641C20023D843 /* GeoMobileEndToEndTests.swift */,
+			);
+			path = EndToEndTests;
+			sourceTree = "<group>";
+		};
+		65F3ABCC2A166917007BA4C9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		65F3ABCD2A166921007BA4C9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				65F3ABCE2A1669A8007BA4C9 /* UserLoaderWithFallBackCompositeTests.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		65F3ABD02A18104D007BA4C9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +375,24 @@
 			productReference = 653EE1BC2A12E4980023D843 /* GeoMobileTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		653EE22B2A1641C20023D843 /* GeoMobileTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653EE2322A1641C20023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTaskTests" */;
+			buildPhases = (
+				653EE2282A1641C20023D843 /* Sources */,
+				653EE2292A1641C20023D843 /* Frameworks */,
+				653EE22A2A1641C20023D843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				653EE2312A1641C20023D843 /* PBXTargetDependency */,
+			);
+			name = GeoMobileTaskTests;
+			productName = GeoMobileTaskTests;
+			productReference = 653EE22C2A1641C20023D843 /* GeoMobileTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -308,6 +405,10 @@
 				TargetAttributes = {
 					653EE1BB2A12E4980023D843 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					653EE22B2A1641C20023D843 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 653EE1BB2A12E4980023D843;
 					};
 				};
 			};
@@ -325,6 +426,7 @@
 			projectRoot = "";
 			targets = (
 				653EE1BB2A12E4980023D843 /* GeoMobileTask */,
+				653EE22B2A1641C20023D843 /* GeoMobileTaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +438,13 @@
 			files = (
 				653EE1C82A12E49B0023D843 /* Preview Assets.xcassets in Resources */,
 				653EE1C42A12E49B0023D843 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		653EE22A2A1641C20023D843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +481,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		653EE2282A1641C20023D843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653EE2372A1663BF0023D843 /* XCTestCase+TrackMemoryLeak.swift in Sources */,
+				653EE22F2A1641C20023D843 /* GeoMobileEndToEndTests.swift in Sources */,
+				65F3ABCF2A1669A8007BA4C9 /* UserLoaderWithFallBackCompositeTests.swift in Sources */,
+				65F3ABD22A181072007BA4C9 /* Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		653EE2312A1641C20023D843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 653EE1BB2A12E4980023D843 /* GeoMobileTask */;
+			targetProxy = 653EE2302A1641C20023D843 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		653EE1DF2A12E49B0023D843 /* Debug */ = {
@@ -556,6 +684,45 @@
 			};
 			name = Release;
 		};
+		653EE2332A1641C20023D843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoMobileTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeoMobileTask";
+			};
+			name = Debug;
+		};
+		653EE2342A1641C20023D843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abdul.GeoMobileTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoMobileTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeoMobileTask";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +740,15 @@
 			buildConfigurations = (
 				653EE1E22A12E49B0023D843 /* Debug */,
 				653EE1E32A12E49B0023D843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653EE2322A1641C20023D843 /* Build configuration list for PBXNativeTarget "GeoMobileTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653EE2332A1641C20023D843 /* Debug */,
+				653EE2342A1641C20023D843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
