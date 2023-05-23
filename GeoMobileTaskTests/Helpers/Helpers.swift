@@ -35,3 +35,17 @@ func uniqueUserModel() -> [User] {
 func makeItemsJSON(_ items: [[String: Any]]) -> Data {
     return try! JSONSerialization.data(withJSONObject: items)
 }
+
+class UserLoaderStub:UserLoader{
+    private let result:UserLoader.Result
+    
+    init(result: UserLoader.Result) {
+        self.result = result
+    }
+    
+    func load(completion: @escaping (UserLoader.Result) -> Void) {
+        completion(result)
+    }
+    
+    
+}

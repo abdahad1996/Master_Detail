@@ -8,20 +8,7 @@
 import Foundation
 import XCTest
 @testable import GeoMobileTask
- 
-class UserLoaderStub:UserLoader{
-    private let result:UserLoader.Result
-    
-    init(result: UserLoader.Result) {
-        self.result = result
-    }
-    
-    func load(completion: @escaping (UserLoader.Result) -> Void) {
-        completion(result)
-    }
-    
-    
-}
+//
 
 class UserLoaderWithFallBackCompositeTests:XCTestCase{
     
@@ -54,6 +41,8 @@ class UserLoaderWithFallBackCompositeTests:XCTestCase{
         expect(sut, completeWith:.failure(anyNSError()))
 
     }
+    
+     
     
     
     // MARK: - Helpers

@@ -21,7 +21,7 @@ final class MainQueueDispatchDecorator<T> {
                 completion()
             }
         }
-    }
+    } 
 }
 
 extension MainQueueDispatchDecorator: UserLoader where T == UserLoader {
