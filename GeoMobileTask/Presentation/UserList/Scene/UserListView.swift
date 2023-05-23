@@ -48,10 +48,39 @@ private extension UserListView {
     
     var emptyResultView: some View {
         NavigationView {
-            AnyView(Text("No results")
-                .font(.largeTitle)
-                .foregroundColor(.gray))
-        }
+            AnyView(
+//                Button(action: {
+//                    //                               onCarTap?()
+//                    viewModel.loadUsers()
+//                }, label: {
+//                    Text("No Internet Tap To  Retry")
+//                        .font(.largeTitle)
+//                        .foregroundColor(.gray)
+//                        .background(.red)
+//                })
+//                //                Text("No results")
+//                //                .font(.largeTitle)
+//                //                .foregroundColor(.gray))
+//            )
+                
+                VStack {
+                            Text("No Internet Connection")
+                            Button(action: {
+                                                    viewModel.loadUsers()
+
+                                // Retry action
+//                                retryCount += 1
+                                // Add your retry logic here
+                            }) {
+                                Text("Retry")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                        }
+            
+        )}
         .navigationBarTitle("Users List")
     }
     
