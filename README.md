@@ -38,11 +38,15 @@ For the ***Feature/Domain module*** here the business logic or model for the fea
 
 Finally, I composed all the module inside the **RootView**.
 
-#### Improvements:
+#### Improvements and feedback:
 - Unit Testing for entire app
 - add snapshot tests to test ui layout
 - add dark mode 
 - improve UI for landscape
+- adding refresh control for reloading
+- on app view will appear reload data
+- adding retry incase of failure
+- adding timestamp for user to know when the data was last updated.
 
 
 
