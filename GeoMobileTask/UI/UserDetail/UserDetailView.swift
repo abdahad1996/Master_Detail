@@ -16,10 +16,11 @@ struct AvatarView: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(width: size, height: size)
+                .cornerRadius(size/2)
         } placeholder: {
             Image(systemName: "photo.fill")
                 .resizable()
-                .aspectRatio(contentMode: .fill)
                 .frame(width: size/2, height: size/2)
            
         }
@@ -34,18 +35,22 @@ struct AvatarView: View {
     }
 }
 
+
+
 struct UserDetailsView: View {
     
     @ObservedObject var viewModel: UserRowViewModel
     
     var body: some View {
-        ScrollView(showsIndicators:false) {
-            VStack(alignment: .center,spacing: 10) {
-                AvatarView(url: viewModel.avatar!, size: 300)
-                Text(viewModel.fullName).font(.title).foregroundColor(.black).bold()
-//                Text(viewModel.lastName).font(.headline).foregroundColor(.gray)
-                Text(viewModel.email).font(.headline).foregroundColor(.gray)
-//                Text(viewModel.id).font(.subheadline).foregroundColor(.gray)
+        OSModeThemeProvider { palette in
+            ScrollView(showsIndicators:false) {
+                VStack(alignment: .center,spacing: 10) {
+                    AvatarView(url: viewModel.avatar!, size: 300)
+                    Text(viewModel.fullName).font(.title).foregroundColor(palette.primary).bold()
+                    //                Text(viewModel.lastName).font(.headline).foregroundColor(.gray)
+                    Text(viewModel.email).font(.headline).foregroundColor(palette.secondary)
+                    //                Text(viewModel.id).font(.subheadline).foregroundColor(.gray)
+                }
             }
         }
         .padding(.top, 20)
