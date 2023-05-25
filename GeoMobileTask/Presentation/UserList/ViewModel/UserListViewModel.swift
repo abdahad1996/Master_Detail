@@ -18,6 +18,8 @@ class UserListViewModel: NSObject, ObservableObject, Identifiable {
     
     @Published private(set) var error: String? = nil
     @Published private(set) var state = State.loading
+    @Published private(set) var timeStamp:String = ""
+
     private let userLoader: UserLoader
     @Published var dataSource: [UserRowViewModel] = []
      
@@ -39,6 +41,10 @@ class UserListViewModel: NSObject, ObservableObject, Identifiable {
             switch result {
             case .success(let users):
                 self.dataSource = users.map({ user in
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "MMM d, h:mm a"
+                     
+                    self.timeStamp = dateFormatter.string(from: Date.init())
                     return UserRowViewModel(item: user)
                 })
                 

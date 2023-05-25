@@ -32,6 +32,7 @@
 		653EE2232A14F2C60023D843 /* CodeableUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2222A14F2C60023D843 /* CodeableUserStore.swift */; };
 		653EE2252A154D540023D843 /* UserLoaderWithFallBackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */; };
 		653EE2272A15536F0023D843 /* UserLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */; };
+		657EB7DE2A1FAA1700020DB8 /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657EB7DD2A1FAA1700020DB8 /* ColorPallete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		653EE2222A14F2C60023D843 /* CodeableUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeableUserStore.swift; sourceTree = "<group>"; };
 		653EE2242A154D540023D843 /* UserLoaderWithFallBackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderWithFallBackComposite.swift; sourceTree = "<group>"; };
 		653EE2262A15536F0023D843 /* UserLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderCacheDecorator.swift; sourceTree = "<group>"; };
+		657EB7DD2A1FAA1700020DB8 /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		653EE1BE2A12E4980023D843 /* GeoMobileTask */ = {
 			isa = PBXGroup;
 			children = (
+				657EB7D92A1F6C1D00020DB8 /* UI */,
 				653EE2122A1442970023D843 /* Cache */,
 				653EE2002A13978C0023D843 /* Presentation */,
 				653EE1C32A12E49B0023D843 /* Assets.xcassets */,
@@ -185,7 +188,6 @@
 		653EE2032A1397DC0023D843 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				653EE2062A139B630023D843 /* Scene */,
 				653EE2052A139A760023D843 /* ViewModel */,
 			);
 			path = UserList;
@@ -194,8 +196,6 @@
 		653EE2042A1398640023D843 /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
-				653EE2112A13DE350023D843 /* Scene */,
-				653EE20F2A13DA230023D843 /* UserDetailView.swift */,
 			);
 			path = UserDetail;
 			sourceTree = "<group>";
@@ -276,6 +276,41 @@
 			path = FileSystem;
 			sourceTree = "<group>";
 		};
+		657EB7D92A1F6C1D00020DB8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				657EB7DC2A1FA9F400020DB8 /* extensions */,
+				657EB7DB2A1F6C2D00020DB8 /* UserList */,
+				657EB7DA2A1F6C2600020DB8 /* UserDetail */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		657EB7DA2A1F6C2600020DB8 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2112A13DE350023D843 /* Scene */,
+				653EE20F2A13DA230023D843 /* UserDetailView.swift */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		657EB7DB2A1F6C2D00020DB8 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				653EE2062A139B630023D843 /* Scene */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		657EB7DC2A1FA9F400020DB8 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				657EB7DD2A1FAA1700020DB8 /* ColorPallete.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +384,7 @@
 				653EE2272A15536F0023D843 /* UserLoaderCacheDecorator.swift in Sources */,
 				653EE20E2A13D5870023D843 /* UserRowView.swift in Sources */,
 				653EE2232A14F2C60023D843 /* CodeableUserStore.swift in Sources */,
+				657EB7DE2A1FAA1700020DB8 /* ColorPallete.swift in Sources */,
 				653EE21E2A14C70D0023D843 /* UserRemote.swift in Sources */,
 				653EE2192A1444070023D843 /* UserLocalLoader.swift in Sources */,
 				653EE2022A1397D80023D843 /* UserListViewModel.swift in Sources */,
