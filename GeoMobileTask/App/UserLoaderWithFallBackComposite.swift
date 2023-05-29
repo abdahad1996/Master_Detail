@@ -8,6 +8,16 @@
 import Foundation
 
 final class UserLoaderWithFallbackComposite: UserLoader {
+    func load() async throws -> (UserLoader.Result) {
+        do  {
+            let result = try await primary.load()
+            return result
+        } catch(_){
+            return try await fallback.load()
+        }
+         
+    }
+    
     private let primary: UserLoader
     private let fallback: UserLoader
     
@@ -16,15 +26,15 @@ final class UserLoaderWithFallbackComposite: UserLoader {
         self.fallback = fallback
     }
     
-    func load(completion: @escaping (UserLoader.Result) -> Void) {
-        primary.load { [weak self] result in
-            switch result {
-            case .success:
-                completion(result)
-                
-            case .failure:
-                self?.fallback.load(completion: completion)
-            }
-        }
-    }
+//    func load(completion: @escaping (UserLoader.Result) -> Void) {
+//        primary.load { [weak self] result in
+//            switch result {
+//            case .success:
+//                completion(result)
+//
+//            case .failure:
+//                self?.fallback.load(completion: completion)
+//            }
+//        }
+//    }
 }

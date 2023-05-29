@@ -9,7 +9,7 @@ import Foundation
 
 public enum RetrieveCachedUserResult {
     case empty
-    case found(categories: [UserLocal])
+    case found(localUsers: [UserLocal])
     case failure(Error)
 }
 
@@ -21,14 +21,23 @@ public protocol UserStore {
     
     /// The completion handler can be invoked in any thread
     /// Clients are responsible to dispatch to approprate threads, if needed.
-    func delete(completion: @escaping DeletionCompletion)
+//    @available(*, renamed: "delete()")
+//    func delete(completion: @escaping DeletionCompletion)
+    
+    func delete() async throws
     
     /// The completion handler can be invoked in any thread
     /// Clients are responsible to dispatch to approprate threads, if needed.
-    func insert(_ orders: [UserLocal], completion: @escaping InsertionCompletion)
+//    @available(*, renamed: "insert(_:)")
+//    func insert(_ orders: [UserLocal], completion: @escaping InsertionCompletion)
+    
+    func insert(_ orders: [UserLocal]) async throws
     
     /// The completion handler can be invoked in any thread
     /// Clients are responsible to dispatch to approprate threads, if needed.
-    func retrieve(completion: @escaping RetrievalCompletion)
+//    @available(*, renamed: "retrieve()")
+//    func retrieve(completion: @escaping RetrievalCompletion)
+    
+    func retrieve() async -> RetrieveCachedUserResult
     
 }

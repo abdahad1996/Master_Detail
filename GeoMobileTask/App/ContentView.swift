@@ -9,7 +9,14 @@ import SwiftUI
 
 final class RootFactory {
     
-    let remoteLoader: UserRemoteLoader = {
+     lazy var viewModel = UserListViewModel(userLoader: UserLoaderWithFallbackComposite(
+        primary: UserLoaderCacheDecorator(
+            decoratee:remoteLoader,
+            cache:localLoader
+        ),
+        fallback:localLoader))
+    
+    private lazy var remoteLoader: UserRemoteLoader = {
         let session = URLSession(configuration: .ephemeral)
         let httpClient = URLSessionHTTPClient(session: session)
         let url = URL(string: "https://reqres.in/api/users?per_page=10")!
@@ -17,7 +24,7 @@ final class RootFactory {
         return remoteLoader
     }()
     
-    let localLoader:UserLocalLoader = {
+    private lazy var localLoader:UserLocalLoader = {
         let localURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("user.store")
         let localStore = CodeableUserStore(storeURL: localURL)
         let localLoader = UserLocalLoader(store: localStore)
@@ -28,18 +35,13 @@ final class RootFactory {
 }
 
 
-
+@MainActor
 struct ContentView: View {
     private let rootFactory = RootFactory()
-    
+   
     var body: some View {
        
-        UserListView(viewModel: UserListViewModel(userLoader:MainQueueDispatchDecorator(decoratee: UserLoaderWithFallbackComposite(
-            primary: UserLoaderCacheDecorator(
-                decoratee:rootFactory.remoteLoader,
-                cache:rootFactory.localLoader
-            ),
-            fallback:rootFactory.localLoader))))
+        UserListView(viewModel: rootFactory.viewModel)
     }
 }
 

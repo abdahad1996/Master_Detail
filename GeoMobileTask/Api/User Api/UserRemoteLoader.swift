@@ -9,7 +9,7 @@ import Foundation
 
 import Foundation
 final class UserRemoteLoader: UserLoader {
-  
+    
     typealias Result = UserLoader.Result
     
     private let url: URL
@@ -24,17 +24,18 @@ final class UserRemoteLoader: UserLoader {
         self.url = url
         self.client = client
     }
- 
-    func load(completion: @escaping (Result) -> Void) {
-        client.get(from: url) { [weak self] result in
-            guard self != nil else { return }
-            switch result {
-            case let .success((data, response)):
-                completion(UserMapper.map(data, from: response))
-            case .failure:
-                completion(.failure(Error.connectivity))
-            }
+    
+    func load() async throws -> (Result) {
+        do {
+            let (data,response) = try await client.get(from: url)
+            let result = UserMapper.map(data, from: response)
+            return result
+        }catch(_){
+            throw Error.connectivity
         }
+        
+        
+        
     }
 }
 

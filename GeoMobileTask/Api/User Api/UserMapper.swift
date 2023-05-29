@@ -27,8 +27,7 @@ enum UserMapper {
     private static var OK_200: Int { 200 }
     
     static func map(_ data: Data, from response: HTTPURLResponse)  -> UserLoader.Result {
-        guard response.statusCode == OK_200,
-              let items = try? JSONDecoder().decode(UserRootResponse.self, from: data) else {
+        guard let items = try? JSONDecoder().decode(UserRootResponse.self, from: data) else {
             return .failure(UserRemoteLoader.Error.invalidData)
         }
         

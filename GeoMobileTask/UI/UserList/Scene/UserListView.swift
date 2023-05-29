@@ -16,22 +16,31 @@ struct UserListView: View {
     }
     
     var body: some View {
-        switch viewModel.state  {
-        case .loading:
-            progressView
-        default:
-           
-                listView
-            
-            
+        VStack{
+            switch viewModel.state  {
+            case .loading:
+                progressView
+            default:
+                    listView
+                
+            }
         }
-        
+         .task {
+            await viewModel.loadUsers()
+        }
     }
+        
     
     
 }
 
 private extension UserListView {
+    @discardableResult
+    func loadUsers() -> Task<(), Never> {
+        return Task{
+            await viewModel.loadUsers()
+        }
+    }
     
     var listView: some View {
         OSModeThemeProvider { palette in
@@ -43,10 +52,6 @@ private extension UserListView {
                 } else {
                     
                     VStack {
-                        Text("last updated at : \(viewModel.timeStamp)")
-                            .foregroundColor(palette.accentColor)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .padding(.trailing)
                         List(viewModel.dataSource, id: \.self) { character in
                             NavigationLink(destination: UserDetailsView(viewModel: character)) {
                                 UserRowView(item: character)
@@ -62,8 +67,8 @@ private extension UserListView {
         }
          
         .refreshable {
-            viewModel.loadUsers()
-        }
+            loadUsers()
+         }
     }
     
     var emptyResultView: some View {
@@ -74,7 +79,7 @@ private extension UserListView {
                     VStack {
                         Text("No Internet Connection")
                         Button(action: {
-                            viewModel.loadUsers()
+                            loadUsers()
                         }) {
                             Text("Retry")
                                 .padding()

@@ -8,6 +8,8 @@
 import Foundation
 //decorating saving cache in loading functionality 
 final class UserLoaderCacheDecorator: UserLoader {
+    
+    
     private let decoratee: UserLoader
     private let cache: UserCache
     
@@ -16,18 +18,16 @@ final class UserLoaderCacheDecorator: UserLoader {
         self.cache = cache
     }
     
-    func load(completion: @escaping (UserLoader.Result) -> Void) {
-        decoratee.load { [weak self] result in
-            completion(result.map { users in
-                self?.cache.saveIgnoringResult(users)
-                return users
-            })
+    func load() async throws -> (UserLoader.Result) {
+        let result = try await decoratee.load()
+        switch result {
+        case .success(let users):
+            await self.cache.save(users)
+            return .success(users)
+        case .failure(let error):
+            return .failure(error)
         }
+        
     }
-}
-
-private extension UserCache {
-    func saveIgnoringResult(_ users: [User]) {
-        save(users) { _ in }
-    }
+    
 }

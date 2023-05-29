@@ -10,10 +10,12 @@ import Foundation
 import Foundation
 
 final class CodeableUserStore: UserStore {
+    
     private struct Cache: Codable {
         let users: [CodableUsers]
+//        let timeStamp:
         
-        var localCategories: [UserLocal] {
+        var localUsers: [UserLocal] {
             return users.map { $0.local }
         }
     }
@@ -40,58 +42,41 @@ final class CodeableUserStore: UserStore {
         }
     }
     
-    private let queue = DispatchQueue(label: "\(CodeableUserStore.self)Queue", qos: .userInitiated, attributes: .concurrent)
     private let storeURL: URL
     
     init(storeURL: URL) {
         self.storeURL = storeURL
     }
     
-    func retrieve(completion: @escaping RetrievalCompletion) {
+    func retrieve() async -> RetrieveCachedUserResult {
         let storeURL = self.storeURL
-        queue.async {
-            guard let data = try? Data(contentsOf: storeURL) else {
-                return completion(.empty)
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let cache = try decoder.decode(Cache.self, from: data)
-                completion(.found(categories: cache.localCategories))
-            } catch {
-                completion(.failure(error))
-            }
+        guard let data = try? Data(contentsOf: storeURL) else {
+            return RetrieveCachedUserResult.empty
+        }
+        do {
+            let decoder = JSONDecoder()
+            let cache = try decoder.decode(Cache.self, from: data)
+            return RetrieveCachedUserResult.found(localUsers: cache.localUsers)
+           
+        } catch {
+            return RetrieveCachedUserResult.failure(error)
         }
     }
     
-    func insert(_ orders: [UserLocal], completion: @escaping InsertionCompletion) {
+    func insert(_ orders: [UserLocal]) async throws {
         let storeURL = self.storeURL
-        queue.async(flags: .barrier) {
-            do {
-                let encoder = JSONEncoder()
-                let cache = Cache(users: orders.map(CodableUsers.init))
-                let encoded = try encoder.encode(cache)
-                try encoded.write(to: storeURL)
-                completion(nil)
-            } catch {
-                completion(error)
-            }
-        }
+        let encoder = JSONEncoder()
+        let cache = Cache(users: orders.map(CodableUsers.init))
+        let encoded = try encoder.encode(cache)
+        try encoded.write(to: storeURL)
     }
     
-    func delete(completion: @escaping DeletionCompletion) {
+    func delete() async throws {
         let storeURL = self.storeURL
-        queue.async(flags: .barrier) {
             guard FileManager.default.fileExists(atPath: storeURL.path) else {
-                return completion(nil)
+                return ()
             }
-            
-            do {
-                try FileManager.default.removeItem(at: storeURL)
-                completion(nil)
-            } catch {
-                completion(error)
-            }
-        }
+            try  FileManager.default.removeItem(at: storeURL)
+        
     }
 }

@@ -8,7 +8,6 @@
 import Foundation
 
  
-public protocol UserCache {
-    typealias Result = Error?
-    func save(_ user: [User], completion: @escaping (Result) -> Void)
+public protocol UserCache {    
+    func save(_ user: [User]) async 
 }

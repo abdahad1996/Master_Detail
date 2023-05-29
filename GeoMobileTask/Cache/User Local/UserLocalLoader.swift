@@ -15,47 +15,34 @@ public final class UserLocalLoader {
 }
 
 extension UserLocalLoader: UserCache {
-    
-    public typealias SaveResult = Result<Void, Error>
-    
-    public func save(_ users: [User], completion: @escaping (UserCache.Result) -> Void) {
-        store.delete  { [weak self] error in
-            guard let self = self else { return }
-            if let cacheDeletionError = error {
-                completion(cacheDeletionError)
-            } else {
-                self.cache(users, with: completion)            }
+    public func save(_ user: [User]) async {
+        do{
+            try await store.delete()
+            try await store.insert(user.toLocal())
+        }catch (let err){
+            print(err.localizedDescription)
         }
          
     }
     
-    private func cache(_ users: [User], with completion: @escaping (UserCache.Result) -> Void) {
-        store.insert(users.toLocal(), completion: { [weak self] error in
-            guard let _ = self else { return }
-            completion(error)
-        })
-    }
+    
+
     
 }
 
 extension UserLocalLoader: UserLoader {
-    
+    public func load() async throws -> (UserLoader.Result) {
+     let result =  await store.retrieve()
+        switch result {
+        case let .failure(error):
+            return .failure(error)
+        
+        case let .found(localUsers):
+            return .success(localUsers.toDomain())
  
-    public func load(completion: @escaping (UserLoader.Result) -> Void) {
-        store.retrieve { [weak self] result in
-            guard let _ = self else { return }
-            
-            switch result {
-            case let .failure(error):
-                completion(.failure(error))
-            
-            case let .found(localUsers):
-                completion(.success(localUsers.toDomain()))
-                
-            case .empty:
-                completion(.success([]))
-            }
-        }
+        case .empty:
+            return .success([])
+         }
     }
     
 }

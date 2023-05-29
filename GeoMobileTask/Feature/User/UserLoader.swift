@@ -9,6 +9,5 @@ import Foundation
 
 public protocol UserLoader {
     typealias Result = Swift.Result<[User], Error>
-    
-    func load(completion: @escaping (Result) -> Void)
+    func load() async throws -> (Result)
 }
