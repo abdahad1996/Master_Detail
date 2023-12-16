@@ -1,4 +1,4 @@
-# GeeMobile_Task
+# Master_Detail
 
 ## iOS App that displays a list of users where we can tap and go to user profile.The list of users is cached incase there is no internet.
 
